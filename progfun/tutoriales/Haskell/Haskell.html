@@ -1,360 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Haskell</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Haskell</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-  <!-- Favicons -->
-  <link href="images/favicon.png" rel="icon">
-  <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="images/favicon.png" rel="icon" />
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
 
-  <!-- Main Stylesheet File -->
-  <link href="stylesheets/style.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="stylesheets/style.css" rel="stylesheet" />
 
-  <!-- =======================================================
+    <!-- =======================================================
     Theme Name: Regna
     Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
-</head>
 
-<body>
+  <link
+      href="./Haskell Language_files/css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="./Haskell Language_files/hl.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Haskell Language_files/glider.min.css" />
+    <script
+      type="text/javascript"
+      async=""
+      src="./Haskell Language_files/ga.js"
+    ></script>
+    <script src="./Haskell Language_files/glider.min.js"></script>
+  </head>
 
-  <!--==========================
+  <body>
+    <!--==========================
   Header
   ============================-->
-  <header id="header">
-    <div class="container">
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <a href="#hero"
+            ><img
+              width="140px"
+              height="40px"
+              src="images/haskell-logo.svg"
+              alt=""
+              title=""
+          /></a>
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <!--<h1><a href="#hero">Regna</a></h1>-->
+        </div>
 
-      <div id="logo" class="pull-left">
-        <a href="#hero"><img width="140px" height="40px" src="images/logo1.png" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!--<h1><a href="#hero">Regna</a></h1>-->
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Introducción</a></li>
+            <li><a href="#interactive_shell">Tutorial</a></li>
+            <li><a href="#timeline">Historia</a></li>
+            <li><a href="#services">Características</a></li>
+            <li><a href="#frameworks">Frameworks</a></li>
+            <li><a href="#material">Material</a></li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
       </div>
+    </header>
+    <!-- #header -->
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Inicio</a></li>
-          <li><a href="#about">Introducción</a></li>
-          <li><a href="#timeline">Historia</a></li>
-          <li><a href="#services">Características</a></li>
-          <li><a href="#frameworks">Frameworks</a></li>
-          <li><a href="#material">Material</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
+    <!--==========================
     Hero Section
   ============================-->
-  <section id="hero">
-    <div class="hero-container">
-      <h1>Haskell</h1>
-      <h2>Un lenguaje de programación avanzado y puramente funcional.</h2>
-      <a href="#about" class="btn-get-started">Ver más</a>
-    </div>
-  </section><!-- #hero -->
+    <section id="hero">
+      <div class="hero-container">
+        <h1>Haskell</h1>
+        <h2>Un lenguaje de programación avanzado y puramente funcional.</h2>
+        <a href="#about" class="btn-get-started">Ver más</a>
+      </div>
+    </section>
+    <!-- #hero -->
 
-  <main id="main">
-
-    <!--==========================
+    <main id="main">
+      <!--==========================
       Introduction Section
     ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row about-container">
-
-          <div class="col-lg-12 content order-lg-1 order-2">
-            <h2 class="title">Introducción</h2>
-            <p>
-              Haskell Stack es un entorno de desarrollo integral para Haskell, podríamos dividirlo en tres grandes componentes: Stack, que es el constructor de proyectos de múltiples paquetes de Haskell, GHC (Glasgow Haskell Compiler) el compilador para programas en Haskell. Y Haddock, un generador de documentación para paquetes de Haskell. El presente tutorial mostrará en la sección de instalación las instrucciones para los sistemas operativos Windows y GNU/Linux, a pesar que muchas de las fases son exactamente iguales.
-            </p>
-
-            <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="https://www.haskell.org/downloads/">Descargar</a></h4>
-              <p class="description">
-                Hay tres maneras ampliamente usadas para instalar Haskell en las diversas plataformas.
-                <a href="https://www.haskell.org/downloads/">Click aquí.</a>
+      <section id="about">
+        <div class="container">
+          <div class="row about-container">
+            <div class="col-lg-12 content order-lg-1 order-2">
+              <h2 class="title">Introducción</h2>
+              <p>
+                Haskell Stack es un entorno de desarrollo integral para Haskell,
+                podríamos dividirlo en tres grandes componentes: Stack, que es
+                el constructor de proyectos de múltiples paquetes de Haskell,
+                GHC (Glasgow Haskell Compiler) el compilador para programas en
+                Haskell. Y Haddock, un generador de documentación para paquetes
+                de Haskell. El presente tutorial mostrará en la sección de
+                instalación las instrucciones para los sistemas operativos
+                Windows y GNU/Linux, a pesar que muchas de las fases son
+                exactamente iguales.
               </p>
-            </div>
 
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-paper-plane"></i></div>
-              <h4 class="title"><a href="https://www.haskell.org/community/">Comunidad</a></h4>
-              <p class="description">
-                Haskellers interactúa, habla y colabora en varios medios y en todo el mundo. Hay lugares para aprender, enseñar, hacer preguntas y encontrar contribuidores y colaboradores.
-                <a href="https://www.haskell.org/community/">Click aquí</a>
-              </p>
-            </div>
+              <div class="icon-box wow fadeInUp">
+                <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+                <h4 class="title">
+                  <a href="https://www.haskell.org/downloads/">Descargar</a>
+                </h4>
+                <p class="description">
+                  Hay tres maneras ampliamente usadas para instalar Haskell en
+                  las diversas plataformas.
+                  <a href="https://www.haskell.org/downloads/">Click aquí.</a>
+                </p>
+              </div>
 
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="https://www.haskell.org/documentation/">Documentación</a></h4>
-              <p class="description">
-                En la página de Haskell podemos encontrar libros, cursos, tutoriales, manuales y guías, entre muchas cosas más.
-                <a href="https://www.haskell.org/documentation/">Click aquí</a>
-              </p>
-            </div>
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-paper-plane"></i></div>
+                <h4 class="title">
+                  <a href="https://www.haskell.org/community/">Comunidad</a>
+                </h4>
+                <p class="description">
+                  Haskellers interactúa, habla y colabora en varios medios y en
+                  todo el mundo. Hay lugares para aprender, enseñar, hacer
+                  preguntas y encontrar contribuidores y colaboradores.
+                  <a href="https://www.haskell.org/community/">Click aquí</a>
+                </p>
+              </div>
 
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                <h4 class="title">
+                  <a href="https://www.haskell.org/documentation/"
+                    >Documentación</a
+                  >
+                </h4>
+                <p class="description">
+                  En la página de Haskell podemos encontrar libros, cursos,
+                  tutoriales, manuales y guías, entre muchas cosas más.
+                  <a href="https://www.haskell.org/documentation/"
+                    >Click aquí</a
+                  >
+                </p>
+              </div>
+            </div>
           </div>
-
         </div>
+      </section>
+      <!-- #about -->
 
-      </div>
-    </section><!-- #about -->
+      <!--==========================
+      Interactive Shell Section
+    ============================-->
 
-    <!--==========================
+      <section id="interactive_shell">
+        <div class="pattern-bg">
+          <div class="container">
+            <div class="row">
+              <div class="span12 col-sm-12">
+                <div onclick="tryhaskell.controller.inner.click()" class="try">
+                  <div class="container">
+                    <div class="row">
+                      <div class="span6 col-sm-6">
+                        <h2>¡Pongamoslo a prueba!</h2>
+                        <noscript>
+                          <div class="span6">
+                            <div class="alert alert-warning">
+                              Try haskell requires Javascript to be enabled.
+                            </div>
+                          </div>
+                        </noscript>
+                        <div hidden="" id="cookie-warning" class="span6">
+                          <div class="alert alert-warning">
+                            Try haskell requires cookies to be enabled.
+                          </div>
+                        </div>
+                        <div id="console">
+                          <div class="jquery-console-inner">
+                            <textarea
+                              autocomplete="off"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              spellcheck="false"
+                              class="jquery-console-typer"
+                              style="
+                                position: absolute;
+                                top: 0px;
+                                left: -9999px;
+                              "
+                            ></textarea>
+                            <!--  <div class="jquery-console-prompt-box"> 
+                            >
+                            <span class="jquery-console-prompt"
+                              ><span class="jquery-console-cursor"
+                                >&nbsp;</span
+                              ></span
+                            >
+                          </div>  -->
+                          </div>
+                        </div>
+                      </div>
+                      <div id="guide" class="span6 col-sm-6">
+                        <div class="indent">
+                          <h3>Got 5 minutes?</h3>
+                          <p>
+                            Type
+                            <code
+                              title='Click me to insert "help" into the console.'
+                              style="cursor: pointer"
+                              >help</code
+                            >
+                            to start the tutorial.
+                          </p>
+                          <p>
+                            Or try typing these out and see what happens
+                            <small class="note">(click to insert)</small>:
+                          </p>
+                          <p>
+                            <code
+                              title='Click me to insert "23 * 36" into the console.'
+                              style="cursor: pointer"
+                              >23 * 36</code
+                            >
+                            or
+                            <code
+                              title='Click me to insert "reverse "hello"" into the console.'
+                              style="cursor: pointer"
+                              >reverse "hello"</code
+                            >
+                            or
+                            <code
+                              title='Click me to insert "foldr (:) [] [1,2,3]" into the console.'
+                              style="cursor: pointer"
+                              >foldr (:) [] [1,2,3]</code
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========================
       Timeline Section
     ============================-->
-    <section id="timeline">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 content order-lg-1 order-2 wow fadeIn">
-            <h2 class="title">Historia</h2>
+      <section id="timeline">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 content order-lg-1 order-2 wow fadeIn">
+              <h2 class="title">Historia</h2>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col">
-            <div class="fadeBg"></div>   
-            <div class="timeline-steps">
+          <div class="row">
+            <div class="col">
+              <div class="fadeBg"></div>
+              <div class="timeline-steps">
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1978</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      <b>John Bauker</b> dio la conferencia ganadora del premio
+                      Turing: "Puede la programación liberarse del estilo von
+                      Neumann".
+                    </p>
+                  </div>
+                </div>
 
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1978</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    <b>John Bauker</b> dio la conferencia ganadora del premio Turing: "Puede la programación liberarse del estilo von Neumann".
-                  </p>
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1985</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Creación de <b>Miranda</b> e impulso de los lenguajes de
+                      programación perezosos.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1987</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      En la (FPCA '87) se propuso definir un lenguaje que sea un
+                      <b>estándar abierto</b> para la programación funcional.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1988</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Se pone en marcha un comité para la creación del lenguaje
+                      liderado por <b>Paul Hudak</b>, en la universidad de Yale.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1990</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      <b>Paul Hudak y Philip Wadler</b> publicaron el informe de
+                      la <b>versión 1.0</b> de Haskell. Se creó una lista de
+                      difusión por correo.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1991</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Fue publicada la <b>versión 1.1</b> de Haskell, la cual
+                      incluyó <b>expresiones y secciones de operadores</b>.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1992</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Fue publicada la <b>versión 1.2</b> de Haskell, la cual
+                      solamente incluye pequeñas modificaciones.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1996</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Fue publicada la <b>versión 1.3</b> de Haskell, que
+                      incluyó la
+                      <b
+                        >expansión de librerías, Monadic I/O, clases constructor
+                        y el reemplazo 'Text'</b
+                      >.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1997</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Fue publicada la <b> versión 1.4</b> de Haskell, la cual
+                      solamente incluye pequeñas modificaciones.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1999</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      Se publicó <b> The Haskell 98 Report</b> hito el cual
+                      marcaba la estabilidad del lenguaje.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">1999</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      El <b>Comité de Haskell</b> dejó de existir. Ahora eran
+                      los participantes en la lista de difusión por correo sus
+                      contribuyentes.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-step mb-0 wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="inner-circle"></div>
+                    <p class="h4 mt-3 mb-1">2002</p>
+                    <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
+                      La versión editada de <b> The Haskell 98 Report</b> fue
+                      publicada por la Universidad de Cambridge, haciéndolo
+                      disponible para toda la comunidad.
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1985</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Creación de <b>Miranda</b> e impulso de los lenguajes de programación perezosos.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1987</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    En la (FPCA '87) se propuso definir un lenguaje que sea un <b>estándar abierto</b> para la programación funcional.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1988</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Se pone en marcha un comité para la creación del lenguaje liderado por <b>Paul Hudak</b>, en la universidad de Yale.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1990</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                  <b>Paul Hudak y Philip Wadler</b> publicaron el informe de la <b>versión 1.0</b> de Haskell. Se creó una lista de difusión por correo.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1991</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Fue publicada la <b>versión 1.1</b> de Haskell, la cual incluyó <b>expresiones y secciones de operadores</b>.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1992</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Fue publicada la <b>versión 1.2</b> de Haskell, la cual solamente incluye pequeñas modificaciones.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1996</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Fue publicada la <b>versión 1.3</b> de Haskell, que incluyó la <b>expansión de librerías, Monadic I/O, clases constructor y el reemplazo 'Text'</b>.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1997</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Fue publicada la <b> versión 1.4</b> de Haskell, la cual solamente incluye pequeñas modificaciones.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1999</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    Se publicó <b> The Haskell 98 Report</b> hito el cual marcaba la estabilidad del lenguaje.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-step wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">1999</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    El <b>Comité de Haskell</b>  dejó de existir. Ahora eran los participantes en la lista de difusión por correo sus contribuyentes.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="timeline-step mb-0 wow fadeInUp">
-                <div class="timeline-content">
-                  <div class="inner-circle"></div>
-                  <p class="h4 mt-3 mb-1">2002</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0 hide toggle">
-                    La versión editada de <b> The Haskell 98 Report</b>  fue publicada por la Universidad de Cambridge, haciéndolo disponible para toda la comunidad.
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
-      </div>
-    </section><!-- #timeline -->
-    
+      </section>
+      <!-- #timeline -->
 
-    <!--==========================
+      <!--==========================
       Services Section
     ============================-->
-    <section id="services">
-      <div class="container wow fadeIn">
-        <div class="section-header">
-          <h3 class="section-title">Características</h3>
-          <p class="section-description">
-            A continuación presentaremos algunas de las características de haskell.
-          </p>
+      <section id="services">
+        <div class="container wow fadeIn">
+          <div class="section-header">
+            <h3 class="section-title">Características</h3>
+            <p class="section-description">
+              A continuación presentaremos algunas de las características de
+              haskell.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Puro</a>
+                </h4>
+                <p class="description">
+                  En Haskell toda operación computacional se contempla como
+                  operaciones matemáticas. Así, las funciones solo dependerán de
+                  sus argumentos, no de su estado global.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Declarativo</a>
+                </h4>
+                <p class="description">
+                  Como su elemento central son las funciones, este se centra en
+                  determinar QUÉ hace el programa en vez de CÓMO lo hace.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Polimórfico</a>
+                </h4>
+                <p class="description">
+                  Un valor es polimorfico si puede tener más de un tipo. En
+                  Haskell se manejan dos tipos de polimorfismo Polimorfismo:
+                  Paramétrico y Ad-hoc
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Estáticamente tipado</a>
+                </h4>
+                <p class="description">
+                  Haskell tiene un tipado estático, lo que quiere decir que: Se
+                  pueden encontrar errores antes de que se ejecute el programa
+                  ya que los tipos se verifican en tiempo de compilación.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Perezoso</a>
+                </h4>
+                <p class="description">
+                  Una expresión no es evaluada cuando se le asocian valore a sus
+                  variables, si no que se ejecuta cuando su resultado sea
+                  requerido por otras operaciones.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Programas concisos</a>
+                </h4>
+                <p class="description">
+                  Tiene pocas palabras clave. Usa indentación como medio de
+                  estructuración del código
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Sistema de tipos</a>
+                </h4>
+                <p class="description">
+                  Tiene un sistema de tipo que requiere un poco de información
+                  del programador con los cuales puede detectar una gran
+                  variedad de errores de incompatibilidad.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Efectos monádicos</a>
+                </h4>
+                <p class="description">
+                  Para una función dada una misma entrada, siempre se producirá
+                  la misma salida, independiemtemente del contexto de las
+                  variables.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="box">
+                <h4 class="title">
+                  <a href="https://www.haskell.org/">Concurrente</a>
+                </h4>
+                <p class="description">
+                  Permite que, durante un periodo de tiempo, más de un proceso
+                  se ejecute. Esto dado a su compilador que permite la
+                  computación en paralelo.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Puro</a></h4>
-              <p class="description">En Haskell toda operación computacional se contempla como operaciones matemáticas. Así, las funciones solo dependerán de sus argumentos, no de su estado global.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Declarativo</a></h4>
-              <p class="description">
-                Como su elemento central son las funciones, este se centra en determinar QUÉ hace el programa en vez de CÓMO  lo hace.
-              </p>
-            </div>
-          </div>          
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Polimórfico</a></h4>
-              <p class="description">Un valor es polimorfico si puede tener más de un tipo. En Haskell se manejan dos tipos de polimorfismo Polimorfismo: Paramétrico y Ad-hoc</p>
-            </div>
-          </div>
+      </section>
+      <!-- #services -->
 
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Estáticamente tipado</a></h4>
-              <p class="description">
-                Haskell tiene un tipado estático, lo que quiere decir que:
-                Se pueden encontrar errores antes de que se ejecute el programa ya que los tipos se verifican en tiempo de compilación.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Perezoso</a></h4>
-              <p class="description">
-                Una expresión no es evaluada cuando se le asocian valore a sus variables, si no que se ejecuta cuando su resultado sea requerido por otras operaciones.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Programas concisos</a></h4>
-              <p class="description">
-                Tiene pocas palabras clave.
-                Usa indentación como medio de estructuración del código
-              </p>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Sistema de tipos</a></h4>
-              <p class="description">
-                Tiene un sistema de tipo que requiere un poco de información del programador con los cuales puede detectar una gran variedad de errores de incompatibilidad.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Efectos monádicos</a></h4>
-              <p class="description">
-                Para una función dada una misma entrada, siempre se producirá la misma salida, independiemtemente del contexto de las variables.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <h4 class="title"><a href="https://www.haskell.org/">Concurrente</a></h4>
-              <p class="description">
-                Permite que, durante un periodo de tiempo, más de un proceso se ejecute. Esto dado a su compilador que permite la computación en paralelo.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #services -->
-    
-    
-    <!--==========================
+      <!--==========================
       Frameworks
       ============================-->
       <section id="frameworks">
@@ -365,118 +563,188 @@
 
           <div class="row justify-content-md-center" data-wow-delay="0.4s">
             <div class="col col-lg-5 col-centered">
-              <div class="service-icon"><img src="resources/happstack.jpg" alt="Happstack"></div>
-              <h4 class="service-title"><a href="http://happstack.com/page/view-page-slug/1/happstack" rel="nofollow" target="_blank"> Happstack </a></h4>
-              <p class="service-description">Se considera un framework web completo, el principal componente es happstack-server: un servidor HTTP integrado, combinadores de enrutamiento y fileserving.</p>
+              <div class="service-icon">
+                <img src="resources/happstack.jpg" alt="Happstack" />
+              </div>
+              <h4 class="service-title">
+                <a
+                  href="http://happstack.com/page/view-page-slug/1/happstack"
+                  rel="nofollow"
+                  target="_blank"
+                >
+                  Happstack
+                </a>
+              </h4>
+              <p class="service-description">
+                Se considera un framework web completo, el principal componente
+                es happstack-server: un servidor HTTP integrado, combinadores de
+                enrutamiento y fileserving.
+              </p>
             </div>
             <div class="col col-lg-5 col-centered" data-wow-delay="0.4s">
-              <div class="service-icon"><img src="resources/webapi.png" alt="webapi"></div>
-              <h4 class="service-title"><a href="https://hackage.haskell.org/package/webapi" rel="nofollow" target="_blank" >WebAPI</a></h4>
-              <p class="service-description">Biblioteca ligera basada en WAI que permite definir peticiones y respuestas para los puntos finales como tipos a través de un contrato. Permite crear servicios Web / API REST, generar un cliente Haskell para los servicios existentes de la API.</p>
+              <div class="service-icon">
+                <img src="resources/webapi.png" alt="webapi" />
+              </div>
+              <h4 class="service-title">
+                <a
+                  href="https://hackage.haskell.org/package/webapi"
+                  rel="nofollow"
+                  target="_blank"
+                  >WebAPI</a
+                >
+              </h4>
+              <p class="service-description">
+                Biblioteca ligera basada en WAI que permite definir peticiones y
+                respuestas para los puntos finales como tipos a través de un
+                contrato. Permite crear servicios Web / API REST, generar un
+                cliente Haskell para los servicios existentes de la API.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- #team -->
 
-      </div>
-    </section><!-- #team -->
-
-        <!--==========================
+      <!--==========================
       Material Section
       ============================-->
       <section id="material">
         <div class="container wow fadeInUp">
           <div class="section-header">
             <h3 class="section-title">Material</h3>
+            <br />
+          </div>
+          <div class="row">
+            <div class="col-md-3 service-item">
+              <div class="service-icon"><i class="fa fa-desktop"></i></div>
+              <h4 class="service-title">
+                <a href="docs/Haskell.pdf" rel="nofollow" target="_blank">
+                  Presentación
+                </a>
+              </h4>
+              <p class="service-description">
+                Una breve descripción de Haskell y su sintaxis, con enfoque a la
+                programación funcional.
+              </p>
+            </div>
+            <div class="col-md-3 service-item">
+              <div class="service-icon"><i class="fa fa-road"></i></div>
+              <h4 class="service-title">
+                <a
+                  href="https://github.com/ferestrepoca/paradigmas-de-programacion/tree/gh-pages/progfun/tutoriales/Haskell/docs/Tutorial_Haskell.ipynb"
+                  rel="nofollow"
+                  target="_blank"
+                  >Tutorial</a
+                >
+              </h4>
+              <p class="service-description">
+                Indicaciones basicas y ejemplos que te ayudaran a iniciar en
+                este lenguaje.
+              </p>
+            </div>
+            <div class="col-md-3 service-item">
+              <div class="service-icon"><i class="fa fa-bookmark"></i></div>
+              <h4 class="service-title">
+                <a href="docs/Ejemplos_set.pdf" rel="nofollow" target="_blank"
+                  >Ejemplos</a
+                >
+              </h4>
+              <p class="service-description">
+                Revisa unos ejemplos de Haskell para que puedas tener una mejor
+                idea de su funcionamiento.
+              </p>
+            </div>
+            <div class="col-md-3 service-item">
+              <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
+              <h4 class="service-title">
+                <a href="docs/Taller_Haskell.pdf" rel="nofollow" target="_blank"
+                  >Taller</a
+                >
+              </h4>
+              <p class="service-description">
+                Pon a prueba lo que has aprendido, explora todas las
+                caracteristicas de Haskell.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 service-item">
-            <div class="service-icon"><i class="fa fa-desktop"></i></div>
-            <h4 class="service-title"><a href="docs/Haskell.pdf" rel="nofollow" target="_blank"> Presentación </a></h4>
-            <p class="service-description">Una breve descripción de Haskell y su sintaxis, con enfoque a la programación funcional.</p>
-          </div>
-          <div class="col-md-3 service-item">
-            <div class="service-icon"><i class="fa fa-road"></i></div>
-            <h4 class="service-title"><a href="https://github.com/ferestrepoca/paradigmas-de-programacion/tree/gh-pages/progfun/tutoriales/Haskell/docs/Tutorial_Haskell.ipynb" rel="nofollow" target="_blank" >Tutorial</a></h4>
-            <p class="service-description">Indicaciones basicas y ejemplos que te ayudaran a iniciar en este lenguaje.</p>
-          </div>
-          <div class="col-md-3 service-item">
-            <div class="service-icon"><i class="fa fa-bookmark"></i></div>
-            <h4 class="service-title"><a href="docs/Ejemplos_set.pdf" rel="nofollow" target="_blank">Ejemplos</a></h4>
-            <p class="service-description">Revisa unos ejemplos de Haskell para que puedas tener una mejor idea de su funcionamiento.</p>
-          </div>
-          <div class="col-md-3 service-item">
-            <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
-            <h4 class="service-title"><a href="docs/Taller_Haskell.pdf" rel="nofollow" target="_blank">Taller</a></h4>
-            <p class="service-description">Pon a prueba lo que has aprendido, explora todas las caracteristicas de Haskell.</p>
-          </div>
-        </div>
+      </section>
+      <!-- #team -->
 
-      </div>
-    </section><!-- #team -->
-
-    <!--==========================
+      <!--==========================
     Call To Action Section
     ============================-->
-    <section id="call-to-action">
-      <div class="container wow fadeIn">
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Wiki de Haskell</h3>
-            <p class="cta-text">Si buscas más información y te interesa el lenguaje la wiki de Haskell te será muy útil...</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="https://wiki.haskell.org/Haskell">Click aquí</a>
+      <section id="call-to-action">
+        <div class="container wow fadeIn">
+          <div class="row">
+            <div class="col-lg-9 text-center text-lg-left">
+              <h3 class="cta-title">Wiki de Haskell</h3>
+              <p class="cta-text">
+                Si buscas más información y te interesa el lenguaje la wiki de
+                Haskell te será muy útil...
+              </p>
+            </div>
+            <div class="col-lg-3 cta-btn-container text-center">
+              <a
+                class="cta-btn align-middle"
+                href="https://wiki.haskell.org/Haskell"
+                >Click aquí</a
+              >
+            </div>
           </div>
         </div>
+      </section>
+      <!-- #call-to-action -->
+    </main>
 
-      </div>
-    </section><!-- #call-to-action -->
-
-  </main>
-
-  <!--==========================
+    <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
-    <div class="footer-top">
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container"></div>
+      </div>
+
       <div class="container">
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
+        <div class="copyright">
+          &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!--
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
         -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
       </div>
-    </div>
-  </footer><!-- #footer -->
+    </footer>
+    <!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="./Haskell Language_files/jquery.js"></script>
+    <script src="./Haskell Language_files/bootstrap.min.js"></script>
+    <script src="./Haskell Language_files/home.js"></script>
+    <script src="./Haskell Language_files/jquery.console.js"></script>
+    <script src="./Haskell Language_files/tryhaskell.js"></script>
+    <script src="./Haskell Language_files/tryhaskell.pages.js"></script>
 
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="javascripts/main.js"></script>
-
-</body>
+    <!-- Template Main Javascript File -->
+    <script src="javascripts/main.js"></script>
+  </body>
 </html>
