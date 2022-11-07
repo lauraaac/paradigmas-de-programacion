@@ -130,9 +130,8 @@ tryhaskell.pages.list =
                     "<p>Felicitaciones!, acabas de utilizar una <strong>función</strong>." +
                     " Así es como se hacen las cosas en Haskell." +
                     "<p>Como te habrás imaginado, obtuvimos de regreso <code>" +
-                    tryhaskell.pages.htmlEncode(result.value)
-                    + "</code>.</p><p>¿Alguna vez has querido saber cómo se llmaría tu gemelo malvado? También yo. " +
-                    "Por suerte, puedes ordenar listas de caracteres o " +
+                    tryhaskell.pages.htmlEncode(result.value)+
+                    "Además de ello, puedes ordenar listas de caracteres o " +
                     "<strong>strings</strong>" +
                     ", de la misma forma que los números! <code>sort \"chris\"</code></p>"
             },
@@ -149,8 +148,8 @@ tryhaskell.pages.list =
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Tuplas... Porque a veces un sólo valor no es suficiente."]) +
                     '</h3>' +
-                    "<p>Cuídate de " + tryhaskell.nemesis + "Deberías guardar su identificación para la policía.</p>" +
-                    "<p>Mi gemelo malvado tiene 20 años: " +
+                    "<p>Tu resultado fue " + tryhaskell.nemesis + ".</p>" +
+                    "<p>Ahora quiero añadirle mi edad a mi nombre ordenado " +
                     "<code>(20,\"chirs\")</code></p>"
             },
             trigger: function (result) {
@@ -167,12 +166,12 @@ tryhaskell.pages.list =
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Lo guardaremos a salvo. No te preocupes."]) +
                     '</h3>' +
-                    "<p>¿Ạ caso es normal que un villano tenga " +(age ? age[1] :"") + " años? " +
+                    "<p>Qué guapo y joven te encuentras, comprade! " +(age ? age[1] :"") + " es poco " +
                     // "super-villain?</p>" +
                     "<p>¡Perfecto! Acabas de escribir una <em>tupla</em>. Es la forma de guardar un grupo de valores juntos en Haskell. " +
                     "Puedes colocar en ellas tantos valores como desees:</p>" +
                     "<ul><li><code>(1,\"sombreros\",23/35)</code></li><li><code>(\"Shaggy\",\"Daphnie\",\"Velma\")</code></li></ul>" +
-                    "<p>De hecho, supongamos, que tu nemesis <em>es</em> " +
+                    "<p>De hecho, supongamos, que tu enemigo <em>es</em> " +
                     "<code>" + villain + "</code>" +
                     "¿Cómo averiguarías su edad?</p>" +
                     "<code>fst " + villain + "</code>"
@@ -201,7 +200,7 @@ tryhaskell.pages.list =
                     "<li>Obtener valores de tuplas es fácil.</li>" +
                     "</ol>" +
 
-                    "<p>Ahora, supongamos que quieres usar un valor más deuna vez. " +
+                    "<p>Ahora, supongamos que quieres usar un valor más de una vez. " +
                     "¿Cómo lo harías? " +
                     "Para hacernos la vida más fácil, podemos hacer lo siguiente:</p>" +
 
@@ -259,19 +258,19 @@ tryhaskell.pages.list =
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Ya construíste una lista!"]) +
                     '</h3>' +
-                    "<p>Well done, that was tricky syntax. You used the <code>(:)</code> " +
-                    "function. It takes two values, some value and a list, and " +
-                    " constructs a new list" +
-                    " out of them. We call it 'cons' for short.</p>" +
+                    "<p>Bien hecho!, Usa la <code>(:)</code> " +
+                    "function. Este toma dos valores, un valor entero y una lista y  " +
+                    " devuelve y construye una nueva lista" +
+                    " independiente de la otra. La llamaremos 'cons' por ahora.</p>" +
                     "<p><code>'a'</code> is " +
-                    "the character 'a', <code>[]</code> is an empty list. So " +
-                    "tacking <code>'a'</code> at the start of an empty list just " +
-                    "makes a list <code>['a']</code>!</p>" +
-                    "<p>But thankfully we don't have to type out " +
-                    "<code>'a' : 'b' : []</code> every time we want to make a " +
-                    "list of characters; we can use " +
-                    "<strong>syntactic sugar</strong> and just write" +
-                    " <code>['a','b']</code>. Don't believe me, check this!</p>" +
+                    "el caracter 'a', <code>[]</code> es una lista vacía. Entonces " +
+                    "añadiendo <code>'a'</code> al inicio de una lista vacía tan solo " +
+                    "hace una lista con un elemento <code>['a']</code>!</p>" +
+                    "<p>Pero no te afanes, no siempre tendremos que hacer" +
+                    "<code>'a' : 'b' : []</code> cada vez que queramos una  " +
+                    "lista de caracteres; Tambien podemos usar " +
+                    "<strong>syntactic sugar</strong> y escribir" +
+                    " <code>['a','b']</code>. Prueba tú mismo!</p>" +
                     "<code>'a' : 'b' : [] == ['a','b']</code>"
             },
             trigger: function (result) {
@@ -283,7 +282,7 @@ tryhaskell.pages.list =
         {
             guide: function (result) {
                 return '<h3>' +
-                    tryhaskell.pages.rmsg(["You're on fire!"]) +
+                    tryhaskell.pages.rmsg(["Estás que ardes, crack!"]) +
                     '</h3>' +
                     "<p>You're handling this syntax really well, nice!</p>" +
                     "<p>You just got a boolean value back, and it said " +
@@ -332,12 +331,10 @@ tryhaskell.pages.list =
                         "Functions: Expanded fo' real"]);
                 return "<h3>" + title + "</h3>" +
 
-                    "<p>Here's where the magic begins!</p>" +
+                    "<p>Acá es donde la magia del lenguaje aparece!</p>" +
 
-                    "<p>You just passed the <code>(+1)</code> " +
-                    "function to the <code>map</code> function.</p>" +
-
-                    "<p>You can try other things like <small class='note'>(remember: click to insert them)</small>:</p>" +
+                    "<p>Puedes pasar la funcipon <code>(+1)</code> " +
+                    "a la función <code>map</code>.</p>" +
 
                     "<ul>" +
                     "<li><code>map (*99) [1..10]</code></li>" +
@@ -345,8 +342,8 @@ tryhaskell.pages.list =
                     "<li><code>filter (>5) [62,3,25,7,1,9]</code></li>" +
                     "</ul>" +
 
-                    "<p>Note that a tuple is different to a list because you can do this:</p>" +
-                    "<code>(1,\"George\")</code>"
+                    "<p>Acá es donde te das cuenta que una lista es diferente a una tupla:</p>" +
+                    "<code>(1,\"Pancracio\")</code>"
             },
             trigger: function (result) {
                 return result.expr.match(/^[ ]*map[ ]+\(\+1\)[ ]*\[1..5\][ ]*$/) &&
@@ -356,17 +353,19 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Lists and Tuples</h3>" +
+                return "<h3>Listas y Tuplas</h3>" +
 
-                    "<p>You can only " +
-                    " have a list of numbers or a list of characters, whereas in a tuple you can throw anything in! </p>" +
+                    "<p>Solo puedes tener " +
+                    " una lista de solo número o solo caracteres, mientras que en una tupla puedes meter lo que quieras! </p>" +
 
-                    "<p>We've also seen that you can make a new list with <code>(:)</code> that joins two values together, like: </p>" +
+                    "<p>WTambién puedes crear una nueva lista mediante la función <code>(:)</code> que junta dos valores, por ejemplo: </p>" +
                     "<p><code>1 : [2,3]</code></p>" +
 
-                    "<p>But we can't do this with tuples! You can only write a tuple and then look at what's inside. You can't make new ones on the fly like a list." +
+                    "<p>Pero con las tupla sno puedes hacer esto! Cuando creas una tupla solo puedes ver que hay adentro y realizar ciertas operaciones."+
+                    + "Pero no puedes crear una nueva tupla a partir de otra." +
 
-                    "<p>Let's write our own functions! It's really easy. How about something simple:</p>" +
+                    "<p>Ahora vamos a crear nuestras propias funciones! La verdad, es sencillo y puede"+
+                    " ser el comienzo de un cambio de pensamiendo. Mira lo simple:</p>" +
                     "<code>let square x = x * x in square " + tryhaskell.pages.rmsg([52, 10, 3]) + "</code>"
 
             },
@@ -377,16 +376,16 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Let there be functions</h3>" +
-                    "<p>Nice one! I think you're getting used to the <code>let</code> syntax.</p>" +
-                    "<p>You defined a function. You can read it as, as for a given " +
-                    "<em>parameter</em> called <code>x</code>, <code>square</code> of " +
-                    "<code>x</code> is <code>x * x</code>." +
-                    "<p>Some others you can try are:</p>" +
+                return "<h3>Que buena función!</h3>" +
+                    "<p>Creo que ya estás más adaptado a la sintaxis del <code>let</code>.</p>" +
+                    "<p>Ya has definido una función. Ahora la puedes implementar, de acuerdo al " +
+                    "<em>parámetro</em> llamado <code>x</code>, <code>square</code> de " +
+                    "<code>x</code> es <code>x * x</code>." +
+                    "<p>Otras funciones que puedes probar son:</p>" +
                     "<ul><li><code>let add1 x = x + 1 in add1 5</code></li>" +
                     "<li><code>let second x = snd x in second (3,4)</code></li>" +
                     "</ul>" +
-                    "<p>Let's go crazy and use our <code>square</code> function with map:</p>" +
+                    "<p>Ahora hagamos algo más loco y usemos la función <code>square</code> con map:</p>" +
                     "<code>let square x = x * x in map square [1..10]</code>"
             },
             trigger: function (result) {
@@ -397,14 +396,14 @@ tryhaskell.pages.list =
         {
             guide: function (result) {
                 if (!result || !result.value) result = { value: "[1,4,9,16,25,36,49,64,81,100]" };
-                return "<h3>Let there be functions</h3>" +
+                return "<h3>Déjalas ser funciones</h3>" +
 
-                    "<p>That's so cool! You described a simple function <code>square</code> and then " +
-                    "you just passed it to another function (<code>map</code>) and got back <code>" +
-                    tryhaskell.pages.htmlEncode(result.value) + "</code>, exactly what you expected!</p>" +
+                    "<p> Acabaste de escribir una fucnión llamada <code>square</code> y luego " +
+                    "le añadiste otra función (<code>map</code>) y obtuviste<code>" +
+                    tryhaskell.pages.htmlEncode(result.value) + "</code>, que era lo que esperabas!</p>" +
 
-                    "<p>Haskell is pretty good at composing things together like this. " +
-                    "Some other things you can try are:</p>" +
+                    "<p>Haskell es experto en componer y unas de las funciones " +
+                    "que podemos realizar son:</p>" +
 
                     "<ul>" +
                     "<li><code>let add1 x = x + 1 in map add1 [1,5,7]</code></li>" +
@@ -412,9 +411,9 @@ tryhaskell.pages.list =
                     "<li><code>let take5s = filter (==5) in map take5s [[1,5],[5],[1,1]]</code></li>" +
                     "</ul>" +
 
-                    "<p>Did you get back what you expected?</p>" +
+                    "<p>Obtuvuste lo que esperabas?</p>" +
 
-                    "<p>One more example for text; how do you upcase a letter?</p>" +
+                    "<p>Prueba ahora con un texto; Cómo lo vuelves a letras mayúsculas?</p>" +
 
                     "<p><code>toUpper 'a'</code></p>"
             },
@@ -426,21 +425,24 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Exercise time!</h3>" +
+                return "<h3>¡Te gustan los retos?</h3>" +
 
-                    "<p>Easy! Remember: characters are written like <code>'a'</code> and " +
-                    "strings (lists of characters) are written like <code>\"a\"</code>." +
+                    "<p>Okayyy! Solo recuerda: los caracteres se escriben como <code>'a'</code> y " +
+                    "strings (lists of characters)se escriben como <code>\"a\"</code>." +
 
-                    "<p>I need you to use <code>toUpper</code> capitalise my whole name, " +
-                    "<code>\"Chris\"</code>. Give it a try." +
-                    " You can do it, I believe in you!</p>" +
+                    "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula,por favor. " +
+                    +" Me llamo"+
+                    "<code>\"Haskellito\"</code>." +
+                    " Ahora hazlo! Creo en ti, sé el primero en resolverlo. Te conviene...</p>" 
 
-                    '<p>Spoiler: <code class="spoiler">map toUpper "Chris"</code></p>'
+                    // '<p>Spoiler: <code class="spoiler">map toUpper "Chris"</code></p>'
             },
             trigger: function (result) {
                 return result.expr.match(/^toUpper 'a'$/) &&
                     result.type == "Char";
             }
+
+            //DEJAR HASTA ACÁ!! POR TIEMPPOOOOOOO
         },
         {
             guide: function (result) {
