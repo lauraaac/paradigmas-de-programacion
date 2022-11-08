@@ -242,9 +242,7 @@ tryhaskell.pages.list =
                     "<p>Ahora, veamos brevemente qué hemos aprendido " +
                     "<strong>Ázucar sintáctico</strong>. " +
                     "Intenta escribir esto:</p>" +
-                    "<p><code>'a' : []</code></p>" +
-                    "<p>O avanza a la <code>lección 4</code> para aprender acerca de funciones," +
-                    " el grueso de Haskell!";
+                    "<p><code>'a' : []</code></p>";
             }, trigger: function (result) {
                 return result.expr.match(/^[ ]*let[ ]+villain[ ]*=[ ]*\([0-9]+,[ ]*"[^"]+"\)[ ]*in[ ]+fst[ ]+villain[ ]*/) &&
                     result.type.match(/\(?Num [a-z]\)? => [a-z]$/);
@@ -325,7 +323,7 @@ tryhaskell.pages.list =
             title: 'Functions, reloaded; passing, defining, etc.',
             guide: function () {
                 var title =
-                    tryhaskell.pages.rmsg(["Functions [of a Geisha]",
+                    tryhaskell.pages.rmsg(["Funciones]",
                         "Functions, functors, functoids, funky",
                         "Functions: Expanded fo' real"]);
                 return "<h3>" + title + "</h3>" +
@@ -357,10 +355,10 @@ tryhaskell.pages.list =
                     "<p>Solo puedes tener " +
                     " una lista de solo número o solo caracteres, mientras que en una tupla puedes meter lo que quieras! </p>" +
 
-                    "<p>WTambién puedes crear una nueva lista mediante la función <code>(:)</code> que junta dos valores, por ejemplo: </p>" +
+                    "<p>También puedes crear una nueva lista mediante la función <code>(:)</code> que junta dos valores, por ejemplo: </p>" +
                     "<p><code>1 : [2,3]</code></p>" +
 
-                    "<p>Pero con las tupla sno puedes hacer esto! Cuando creas una tupla solo puedes ver que hay adentro y realizar ciertas operaciones."+
+                    "<p>Pero con las tuplas no puedes hacer esto! Cuando creas una tupla solo puedes ver que hay adentro y realizar ciertas operaciones."+
                     + "Pero no puedes crear una nueva tupla a partir de otra." +
 
                     "<p>Ahora vamos a crear nuestras propias funciones! La verdad, es sencillo y puede"+
@@ -397,7 +395,7 @@ tryhaskell.pages.list =
                 if (!result || !result.value) result = { value: "[1,4,9,16,25,36,49,64,81,100]" };
                 return "<h3>Déjalas ser funciones</h3>" +
 
-                    "<p> Acabaste de escribir una fucnión llamada <code>square</code> y luego " +
+                    "<p> Acabaste de escribir una función llamada <code>square</code> y luego " +
                     "le añadiste otra función (<code>map</code>) y obtuviste<code>" +
                     tryhaskell.pages.htmlEncode(result.value) + "</code>, que era lo que esperabas!</p>" +
 
@@ -430,8 +428,7 @@ tryhaskell.pages.list =
                     "strings (lists of characters)se escriben como <code>\"a\"</code>." +
 
                     "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula,por favor. " +
-                    +" Me llamo"+
-                    "<code>\"Haskellito\"</code>." +
+                    +" Me llamo <code>\"Haskellito\"</code>." +
                     " Ahora hazlo! Creo en ti, sé el primero en resolverlo. Te conviene...</p>" 
 
                     // '<p>Spoiler: <code class="spoiler">map toUpper "Chris"</code></p>'
@@ -445,137 +442,21 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Lesson 4 complete!</h3>" +
+                return "<h3>Lo Lograsteeeee, crack!</h3>" +
 
-                    "<p>Brilliant! You're making excellent progress! " +
-                    "You just passed <code>toUpper</code> to <code>map</code>. No problem.</p>" +
+                    "<p>Avísale a alguno de los expositores " +
+                    "para recibir tu premio.</p>" +
 
-                    "<p>Let's go over what you've learned in this lesson:</p>" +
-
-                    "<ol>" +
-                    "<li>Functions like <code>map</code> take other functions as parameters.</li>" +
-                    "<li>Functions like <code>(+1)</code>, <code>(>5)</code> and " +
-                    "<code>square</code> can be passed to other functions.</li>" +
-                    "<li>Defining functions is just a case of writing what " +
-                    "to do with the parameters.</li>" + "</ol>" +
-
-                    "<p>Let's check out <em>pattern matching</em>; a way to " +
-                    "get values from other values using patterns. Try this: </p>" +
-                    "<p><code>let (a,b) = (10,12) in a * 2</code></p>"
+                    "<p>Espero te haya gustado ese lenguaje."+
+                    " Te recomendamos aprnderlo si quieres aprender a programar mucho mejor.</p>"
             },
             trigger: function (result) {
                 return result.type == "[Char]" &&
                     result.expr.match(/^map[ ]+toUpper/);
             }
-        },
-        {
-            lesson: 5,
-            title: 'Pattern Matching',
-            guide: function (result) {
-                var title =
-                    tryhaskell.pages.rmsg(["And therefore, patterns emerge in nature.",
-                        "And Then Patterns",
-                        "Pattern matching!"])
-                return "<h3>" + title + "</h3>" +
-
-                    "<p>Jolly good show!</p>" +
-                    "<p>So you had a value <code>(10,12)</code> and matched " +
-                    "it against a pattern <code>(a,b)</code>, then you were able" +
-                    " to do stuff with the <code>a</code> and <code>b</code>!" +
-
-                    "<p>Note: Pattern matching <code>(a,b)</code> against " +
-                    "<code>(1,2)</code> to get the <code>a</code> is the same as" +
-                    " doing <code>fst (1,2)</code>, like you did in <code>step7</code>!</p>" +
-
-                    "<p>A pattern always matches the way the " +
-                    "value was originally constructed. Remember that <code>\"abc\"</code> is " +
-                    "syntactic sugar for <code>'a' : 'b' : 'c' : []</code>.</p>" +
-
-                    "<p>So you can get the characters from a string with patterns:</p>" +
-
-                    "<code>let (a:b:c:[]) = \"xyz\" in a</code>"
-            },
-            trigger: function (result) {
-                return result.expr.match(/^[ ]*let[ ]+\(a,b\)[ ]+=[ ]+\(10,12\)[ ]+in[ ]+a[ ]*\*[ ]*2[ ]*$/) &&
-                    result.type.match(/\(?Num [a-z]\)? => [a-z]$/);
-            }
-        },
-        {
-            guide: function (result) {
-                return "<h3>" + tryhaskell.pages.rmsg(["Ignorance is bliss", "Ignoring values"]) + "</h3>" +
-
-                    "<p>You're getting into tricky syntax, huh? I know you can handle it!</p>" +
-
-                    "<p>If you just want some of the values, you can ignore the others with <code>_</code> (underscore) like this:</p>" +
-
-                    "<p><code>let (a:_:_:_) = \"xyz\" in a</code></p>" +
-
-                    "<p>In fact, <code>(a:b:c:d)</code> is short-hand for " +
-                    "<code>(a:(b:(c:d)))</code>, so you can just ignore the rest in one go:</p>" +
-
-                    "<code>let (a:_) = \"xyz\" in a</code>"
-            },
-            trigger: function (result) {
-                return result.expr.match(/^[ ]*let[ ]+\(a:b:c:\[\]\)[ ]*=[ ]*\"xyz\"[ ]*in[ ]+a[ ]*$/) &&
-                    result.type == "Char";
-            }
-        },
-        {
-            guide: function (result) {
-                return "<h3>" + tryhaskell.pages.rmsg(["Exercise!", "Show me the money!"]) + "</h3>" +
-
-                    "<p>Try to get the <code>'a'</code> value from this value using pattern matching:</p>" +
-                    "<p><code>(10,\"abc\")</code></p>" +
-
-                    "<p>Spoiler: <code class='spoiler'>let (_,(a:_)) = (10,\"abc\") in a</code></p>"
-            },
-            trigger: function (result) {
-                return result.expr.match(/^[ ]*let[ ]*\(a:_\)[ ]*=[ ]*"xyz"[ ]*in[ ]*a[ ]*$/) &&
-                    result.type == "Char";
-            }
-        },
-        {
-            guide: function (result) {
-                return "<h3>" + tryhaskell.pages.rmsg(["Well done!", "Brilliant!", "Perfetto!"]) + "</h3>" +
-
-                    "<p>Wizard! I think you've got pattern-matching down.</p>" +
-
-                    "<p>If you're still a bit unsure, here are some other things you can try:</p>" +
-
-                    "<ul>" +
-                    "<li><code>let _:_:c:_ = \"abcd\" in c</code></li>" +
-                    "<li><code>let [a,b,c] = \"cat\" in (a,b,c)</code></li>" +
-                    "</ul>" +
-
-                    "<p>You can also grab a whole value <em>and</em> pattern match on it (have your cake and eat it too):</p>" +
-
-                    "<code>let abc@(a,b,c) = (10,20,30) in (abc,a,b,c)</code>"
-            },
-            trigger: function (result) {
-                return result.expr.match(/^[ ]*let[ ]*\(_,\(?a:_\)?\)[ ]*=[ ]*\(10,\"abc\"\)[ ]*in[ ]*a[ ]*$/) &&
-                    result.type == "Char";
-            }
-        },
-        {
-            guide: function (result) {
-                return "<h3>" + tryhaskell.pages.rmsg(["And that's the end of that chapter"]) + "</h3>" +
-
-                    "<p>That was easy, right?</p>" +
-
-                    "<p>Let's go over what you've learned in this lesson:</p>" +
-
-                    "<ol>" +
-                    "<li>Values are pattern matched, or <em>deconstructed</em>, by writing however they were constructed.</li>" +
-                    "<li>Patterns let you use the values that you match.</li>" +
-                    "<li>You can ignore whichever values you want.</li>" +
-                    "<li>You can pattern match and keep hold of the original value too.</li>" +
-                    "</ol>" +
-
-                    "<p>Okay! That's all for now. It's time to dig into some <a href='/documentation'>documentation</a>!</p>"
-
-            },
-            trigger: function (result) {
-                return result.type.match(/Num/)
-            }
         }
+
+
+
+
     ];
