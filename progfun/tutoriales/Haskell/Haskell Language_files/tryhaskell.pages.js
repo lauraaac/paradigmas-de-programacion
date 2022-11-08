@@ -307,11 +307,8 @@ tryhaskell.pages.list =
                     "<li>Una lista de caracteres <code>['a','b']</code> también puede ser escrita así: " +
                     "<code>\"ab\"</code>. Y es más sencillo!</li>"
                     + "</ol>" +
-                    "<p>Juuuj! Ya hemos abrodado muchooo, " +
-                    tryhaskell.nemesis + ", vamos a tratar de robar la " + tryhaskell.pages.rmsg(['mojo',
-                        'pizza']) +
-                    "! Vamos a aprender un poco más sobre las funciones y cómo" +
-                    "las podemos usar. Prueba esto:</p> <code>map (+1) [1..5]</code></p>";
+                    "<p>Juuuj! Ya hemos abrodado muchooo! Vamos a aprender un poco más sobre las funciones y cómo" +
+                    " las podemos usar. Prueba esto:</p> <code>map (+1) [1..5]</code></p>";
             },
             trigger: function (result) {
                 return result.expr.replace(/[^\]\[',=\"]?/g, '') == "['','','']==\"\"" &&
@@ -323,14 +320,14 @@ tryhaskell.pages.list =
             title: 'Functions, reloaded; passing, defining, etc.',
             guide: function () {
                 var title =
-                    tryhaskell.pages.rmsg(["Funciones]",
+                    tryhaskell.pages.rmsg(["Funciones",
                         "Functions, functors, functoids, funky",
                         "Functions: Expanded fo' real"]);
                 return "<h3>" + title + "</h3>" +
 
                     "<p>Acá es donde la magia del lenguaje aparece!</p>" +
 
-                    "<p>Puedes pasar la funcipon <code>(+1)</code> " +
+                    "<p>Puedes pasar la función <code>(+1)</code> " +
                     "a la función <code>map</code>.</p>" +
 
                     "<ul>" +
@@ -427,9 +424,9 @@ tryhaskell.pages.list =
                     "<p>Okayyy! Solo recuerda: los caracteres se escriben como <code>'a'</code> y " +
                     "strings (lists of characters)se escriben como <code>\"a\"</code>." +
 
-                    "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula,por favor. " +
-                    +" Me llamo <code>\"Haskellito\"</code>." +
-                    " Ahora hazlo! Creo en ti, sé el primero en resolverlo. Te conviene...</p>" 
+                    "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula,por favor.</p> " +
+                    +"<p> Me llamo <code>\"Haskellito\"</code>.</p> " +
+                    "<p> Ahora hazlo! Creo en ti, sé el primero en resolverlo. Te conviene...</p>" 
 
                     // '<p>Spoiler: <code class="spoiler">map toUpper "Chris"</code></p>'
             },
@@ -448,7 +445,7 @@ tryhaskell.pages.list =
                     "para recibir tu premio.</p>" +
 
                     "<p>Espero te haya gustado ese lenguaje."+
-                    " Te recomendamos aprnderlo si quieres aprender a programar mucho mejor.</p>"
+                    " Te recomendamos aprenderlo a fondo si quieres aprender a programar mucho mejor.</p>"
             },
             trigger: function (result) {
                 return result.type == "[Char]" &&
