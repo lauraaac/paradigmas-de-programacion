@@ -229,7 +229,7 @@ tryhaskell.pages.list =
 
                     "<p>Entonces, si sólo quisieramos obtener la edad de nuestro villano, podríamos hacer lo siguiente:</p>" +
 
-                    "<code><span class='highlight'>let</span> villano <span class='highlight'>=</span> (28,\"chirs\") <span class='highlight'>in</span> fst villano</code>"
+                    "<code><span class='highlight'>let</span> villain <span class='highlight'>=</span> (28,\"chirs\") <span class='highlight'>in</span> fst villain</code>"
 
             }, trigger: function (result) {
                 return result.expr.match(/^[ ]*let[ ]+x[ ]*=[ ]*[0-9]+[ ]*in[ ]*x[ ]*\*[ ]*x/) &&
@@ -253,23 +253,22 @@ tryhaskell.pages.list =
         // Lesson 3: Syntactic sugar
         {
             lesson: 3,
-            title: 'Ázucar síntactico',
+            title: 'Sintáctico',
             guide: function (result) {
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Ya construíste una lista!"]) +
                     '</h3>' +
-                    "<p>Bien hecho!, Usa la <code>(:)</code> " +
-                    "function. Este toma dos valores, un valor entero y una lista y  " +
+                    "<p>Bien hecho!, Usa la función <code>(:)</code> " +
+                    ". Este toma dos valores, un valor entero y una lista y  " +
                     " devuelve y construye una nueva lista" +
-                    " independiente de la otra. La llamaremos 'cons' por ahora.</p>" +
-                    "<p><code>'a'</code> is " +
+                    " independiente de la otra.</p>" +
+                    "<p><code>'a'</code> es " +
                     "el caracter 'a', <code>[]</code> es una lista vacía. Entonces " +
                     "añadiendo <code>'a'</code> al inicio de una lista vacía tan solo " +
                     "hace una lista con un elemento <code>['a']</code>!</p>" +
                     "<p>Pero no te afanes, no siempre tendremos que hacer" +
                     "<code>'a' : 'b' : []</code> cada vez que queramos una  " +
-                    "lista de caracteres; Tambien podemos usar " +
-                    "<strong>syntactic sugar</strong> y escribir" +
+                    "lista de caracteres; Tambien podemos escribir" +
                     " <code>['a','b']</code>. Prueba tú mismo!</p>" +
                     "<code>'a' : 'b' : [] == ['a','b']</code>"
             },
@@ -284,10 +283,10 @@ tryhaskell.pages.list =
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Estás que ardes, crack!"]) +
                     '</h3>' +
-                    "<p>You're handling this syntax really well, nice!</p>" +
-                    "<p>You just got a boolean value back, and it said " +
-                    "<code>True</code>. That means they're equal!</p>" +
-                    "<p>One final demonstration on syntactic sugar for now:</p>" +
+                    "<p>Has entendido bastante bien la sintaxis! !</p>" +
+                    "<p>Acabas de recibir un valor booleano, y este fue " +
+                    "<code>True</code>. Lo cual significa que son iguales!</p>" +
+                    "<p>Una demostración final para que pruebes será:</p>" +
                     "<code>['a','b','c'] == \"abc\"</code>"
             },
             trigger: function (result) {
@@ -299,22 +298,22 @@ tryhaskell.pages.list =
         {
             guide: function (result) {
                 return '<h3>' +
-                    tryhaskell.pages.rmsg(["Lesson 3 over! Syntactic sugar is sweet"]) +
+                    tryhaskell.pages.rmsg(["La lección 3 ha acabado!"]) +
                     '</h3>' +
-                    "<p>Let's have a gander at what you learned:</p>" +
+                    "<p>Ya casi eres un master en Haskell:</p>" +
                     "<ol>" +
-                    "<li>In <code>'a' : []</code>, <code>:</code> is really just " +
-                    " another function, just clever looking.</li>" +
-                    "<li>Pretty functions like this are written like <code>(:)</code> when " +
-                    " you talk about them.</li>" +
-                    "<li>A list of characters <code>['a','b']</code> can just be written " +
-                    "<code>\"ab\"</code>. Much easier!</li>"
+                    "<li> <code>'a' : []</code>, <code>:</code> es solo " +
+                    " otra función.</li>" +
+                    "<li>Estas sencillas funciones son escritas como <code>(:)</code> cuando " +
+                    " hablas de ellas.</li>" +
+                    "<li>Una lista de caracteres <code>['a','b']</code> también puede ser escrita así: " +
+                    "<code>\"ab\"</code>. Y es más sencillo!</li>"
                     + "</ol>" +
-                    "<p>Phew! You're getting pretty deep! Your arch nemesis, " +
-                    tryhaskell.nemesis + ", is gonna try to steal your " + tryhaskell.pages.rmsg(['mojo',
+                    "<p>Juuuj! Ya hemos abrodado muchooo, " +
+                    tryhaskell.nemesis + ", vamos a tratar de robar la " + tryhaskell.pages.rmsg(['mojo',
                         'pizza']) +
-                    "! Let's learn a bit more about functions and passing " +
-                    "them around. Try this:</p> <code>map (+1) [1..5]</code></p>";
+                    "! Vamos a aprender un poco más sobre las funciones y cómo" +
+                    "las podemos usar. Prueba esto:</p> <code>map (+1) [1..5]</code></p>";
             },
             trigger: function (result) {
                 return result.expr.replace(/[^\]\[',=\"]?/g, '') == "['','','']==\"\"" &&
@@ -376,7 +375,7 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Que buena función!</h3>" +
+                return "<h3>Qué buena función!</h3>" +
                     "<p>Creo que ya estás más adaptado a la sintaxis del <code>let</code>.</p>" +
                     "<p>Ya has definido una función. Ahora la puedes implementar, de acuerdo al " +
                     "<em>parámetro</em> llamado <code>x</code>, <code>square</code> de " +
@@ -411,7 +410,7 @@ tryhaskell.pages.list =
                     "<li><code>let take5s = filter (==5) in map take5s [[1,5],[5],[1,1]]</code></li>" +
                     "</ul>" +
 
-                    "<p>Obtuvuste lo que esperabas?</p>" +
+                    "<p>Obtuviste lo que esperabas?</p>" +
 
                     "<p>Prueba ahora con un texto; Cómo lo vuelves a letras mayúsculas?</p>" +
 
@@ -425,7 +424,7 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>¡Te gustan los retos?</h3>" +
+                return "<h3>¿Te gustan los retos?</h3>" +
 
                     "<p>Okayyy! Solo recuerda: los caracteres se escriben como <code>'a'</code> y " +
                     "strings (lists of characters)se escriben como <code>\"a\"</code>." +
