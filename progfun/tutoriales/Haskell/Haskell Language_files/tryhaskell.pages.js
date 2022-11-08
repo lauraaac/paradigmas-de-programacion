@@ -131,7 +131,7 @@ tryhaskell.pages.list =
                     " Así es como se hacen las cosas en Haskell." +
                     "<p>Como te habrás imaginado, obtuvimos de regreso <code>" +
                     tryhaskell.pages.htmlEncode(result.value)+
-                    "Además de ello, puedes ordenar listas de caracteres o " +
+                    " </code> Además de ello, puedes ordenar listas de caracteres o " +
                     "<strong>strings</strong>" +
                     ", de la misma forma que los números! <code>sort \"chris\"</code></p>"
             },
