@@ -259,10 +259,10 @@ tryhaskell.pages.list =
                 return '<h3>' +
                     tryhaskell.pages.rmsg(["Ya construíste una lista!"]) +
                     '</h3>' +
-                    "<p>Well done, that was tricky syntax. You used the <code>(:)</code> " +
-                    "function. It takes two values, some value and a list, and " +
-                    " constructs a new list" +
-                    " out of them. We call it 'cons' for short.</p>" +
+                    "<p>Muy bien. Esa sintaxis tenía algo de truco. Acabas de usar la función <code>(:)</code> " +
+                    ". Lo que hace es tomar dos valores, algún valor y una lista, y " +
+                    " construye una nueva lista " +
+                    " con ellos. We call it 'cons' for short.</p>" +
                     "<p><code>'a'</code> is " +
                     "the character 'a', <code>[]</code> is an empty list. So " +
                     "tacking <code>'a'</code> at the start of an empty list just " +
