@@ -93,8 +93,7 @@
                             <li><a href="aplicaciones.html#sist_admon">Sistemas de administración de bases de datosrelacionales</a></li>
                             <li><a href="aplicaciones.html#resolucion">Resolución de ecuaciones simbólicas</a></li>
                             <li><a href="aplicaciones.html#consultas">Consultas lógicas basadas en reglas</a></li>
-                            <li><a href="aplicaciones.html#creacion">Creación de prototipos</a></li>
-                            <li><a href="aplicaciones.html#simulacion">Simulación</a></li>
+                            <li><a href="aplicaciones.html#Logica_probabilistica">Programación lógica probabilística</a></li>
                         </ul>
                     </li>
                     <li><a href="presentaciones.html">Presentaciones y otros</a></li>
@@ -119,7 +118,7 @@
             <div class="container">
                 <div class="text_cell_render border-box-sizing rendered_html">
                     <h2 class="title"><strong>Aplicaciones</strong></h2>
-                    <p>Las siguientes son aplicaciones en las que se puede emplearla <b>programación lógica</b> para
+                    <p>Las siguientes son aplicaciones en las que se puede emplear la <b>programación lógica</b> para
                         resolver problemas.</p>
                     <li><a href="#ai">Inteligencia artificial</a></li>
                     <li><a href="#sist_experto">Sistemas Expertos</a></li>
@@ -129,8 +128,7 @@
                     <li><a href="#sist_admon">Sistemas de administración de bases de datos relacionales</a></li>
                     <li><a href="#resolucion">Resolución de ecuaciones simbólicas</a></li>
                     <li><a href="#consultas">Consultas lógicas basadas en reglas</a></li>
-                    <li><a href="#simulacion">Simulación</a></li>
-                    <li><a href="#creacion">Creación de prototipos</a></li>
+                    <li><a href="#Logica_probabilistica">Programación Lógica Probabilística</a></li>
                 </div>
             </div>
         </section><!-- #content -->
@@ -335,24 +333,63 @@
         <!--==========================
         Content Section
         ============================-->
-        <section id="creacion" style="margin-top:50px;">
+        <section id="Logica_probabilistica" style="margin-top:50px;">
             <div class="container">
                 <div class="text_cell_render border-box-sizing rendered_html">
-                    <h2 class="title"><strong>Creación de prototipos</strong></h2>
+                    <h2 class="title"><strong>Programación Lógica Probabilística</strong></h2>
+                    <p> La programación probabilística es un paradigma de programación en el que se especifican modelos 
+                        probabilísticos y en el cual la inferencia se realiza automáticamente a partir de dichos modelos . 
+                        Además, se ha utilizado como un subcampo de la inteligencia artificial, el cual incluye estructuras a 
+                        los lenguajes de programación tradicionales para trabajar con inferencia probabilística 
+                        y aprendizaje.
+
+                        La programación lógica permite aprovechar las ventajas de la programación declarativa. 
+                        Además, ha mostrado utilidad en diferentes áreas de aplicación gracias a su forma particular 
+                        de ejecutar la lógica en sus cláusulas. Sin embargo, la programación lógica tiene ciertas 
+                        limitaciones al abordar situaciones del mundo real en las que se ven involucrados factores 
+                        probabilísticos. 
+                        
+                        La manera de tratar la incertidumbre en la programación lógica es mediante la adición a esta 
+                        del concepto de probabilidad, generando, en este caso, la programación lógica probabilística. 
+                        Con la programación lógica probabilística se seguirá el mismo funcionamiento que en la 
+                        programación lógica, pero teniendo en cuenta que los hechos presentados no tienen por qué 
+                        ocurrir siempre tal como ocurren en la vida real.
+                        
+                        </p>
+                        <ul>
+                            <li style="margin-left:2em">
+                                <p><font color="red">Problog</font> es un lenguaje de programación probabilístico que se basa en Prolog.
+                                    Desde una perspectiva de modelado, se puede considerar que un programa de Problog está compuesto por dos partes: 
+                                    una parte probabilística que define una distribución de probabilidad sobre los valores de verdad, y una parte lógica que 
+                                    deriva los valores de verdad utilizando mecanismos de razonamiento como en Prolog.
+                                    </p>
+                                    <p><strong>Ejemplo en Problog:</strong>
+                                    El siguiente programa modela un pequeño grupo social, donde el tabaquismo de las personas es influenciado por sus amigos, 
+                                    e indirectamente por los amigos de los amigos.
+                                </p>    
+                                <code> 0.4::asthma(X) :- smokes(X). <br> </code>
+                                <code> 0.3::smokes(X). <br> </code>
+                                <code> 0.2::smokes(X) :- friend(X,Y), smokes(Y). <br> </code>
+                                <code> friend(1,2). friend(2,1). friend(2,4). friend(3,2). friend(4,2).<br> </code>
+                                    <br>
+                                <p>
+                                    La principal tarea de inferencia abordada en ProbLog es la de calcular la probabilidad de que una consulta 
+                                    tenga éxito, por ejemplo <code>?- asthma(2)</code> tiene éxito con una probabilidad de 0,15. Si añadimos <code>asthma(3)</code> como evidencia, 
+                                    la probabilidad condicional de <code>?- asthma(2)</code> es de 0,19.
+                                </p>
+                                <p>
+                                    Problog2 es el sucesor de Problog, y es uno de los lenguajes lógicos probabilísticos 
+                                    más modernos. Este lenguaje, además, presenta grandes aplicaciones en el ámbito de la 
+                                    inteligencia artificial; incluso permite modelar y obtener respuestas rápidamente 
+                                    pues cuenta con la capacidad de tratar conjuntos de datos muy grandes.  
+
+                                </p>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </section><!-- #content -->
 
-        <!--==========================
-        Content Section
-        ============================-->
-        <section id="simulacion" style="margin-top:50px;">
-            <div class="container">
-                <div class="text_cell_render border-box-sizing rendered_html">
-                    <h2 class="title"><strong>Simulacion</strong></h2>
-                </div>
-            </div>
-        </section><!-- #content -->
 
     </main>
 
