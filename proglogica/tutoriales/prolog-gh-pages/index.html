@@ -87,6 +87,7 @@
     <li><a href="#16-hanoi" aria-hidden="true">11.7 Problema de Torres de Hanoi</a></li>
     <li><a href="#18-ejemplo-bubble" aria-hidden="true">11.8 Ejemplo Bubble Sort</a></li>
     <li><a href="#19-ejemplo-analizador" aria-hidden="true">11.9 Ejemplo Doomie de Analizador Sintáctico del Inglés</a></li>
+    <li><a href="#20-ejemplo-sistema-experto-animales" aria-hidden="true">11.10 Ejemplo Sistema Experto Animales</a></li>
   </ul>
   <li><a href="#15-Aplicaciones" aria-hidden="true">12. Aplicaciones</a></li>
   <li><a href="#16-Des-Ven" aria-hidden="true">13. Desventajas / Ventajas</a></li>
@@ -1687,6 +1688,57 @@ Definitive Clauses Grammar o por sus siglas en inglés DCG</p>
 </p>
 
 
+<h2><a id="20-ejemplo-sistema-experto-animales" class="anchor" href="#20-ejemplo-sistema-experto-animales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>11.10 Ejemplo Sistema Experto Animales</h2>
+
+
+<p align="justify">En este ejemplo se lleva a cabo la implementación de un Sistema Experto en prolog que permite identificar un animal dentro de un conjunto de animales definidos por características.</p>
+<p align="justify">Un sistema experto es un sistema computacional que emula la capacidad de tomar decisiones de un humano experto. Está compuesto por una base de conocimiento y un motor de inferencia, el cual recibe las características de una entidad o un problema. Comparando el conocimiento previo existente en la base de conocimientos con las características de la entidad es posible identificarlo y, en consecuencia, producir un diagnóstico o deducción.
+</p>
+
+<p>Las siguientes son las partes del sistema:</p>
+
+<p>Primero se define la regla, con la cual se inicia el proceso. Esta regla llama a las hipótesis, luego realiza el proceso para evaluarlas y, finalmente, escribe en consola la solución final.</p>
+<p align="center">
+<img src="images/Sistema Animales 1.png">
+</p>
+
+<p align="justify">Se define una lista con las hipótesis que van a ser puestas a prueba. Estas hipótesis son excluyentes entre ellas (por ejemplo, el animal no puede ser un tigre y una jirafa al mismo tiempo). </p>
+
+<p align="center">
+<img src="images/Sistema Animales 2.png">
+</p>
+
+<p>Luego, se identifican las características por las cuales se puede diferenciar cada animal.</p>
+<p align="center">
+<img src="images/Sistema Animales 3.png">
+</p>
+<p>Se puede ver que cada una de ellas llama a "verificar"; de esta manera, se le preguntará al usuario si el animal que busca tiene una característica en particular. Con esta información se alimenta la base de conocimiento.</p>
+<p align="center">
+<img src="images/Sistema Animales 4.png">
+</p>
+<p align="justify">La regla auxiliar "ask" sirve para recibir los datos del usuario: esta hace uso de la regla "assert" que trae prolog por defecto, la cual permite añadir nuevos hechos a la base de conocimiento del sistema.</p>
+<p align="center">
+<img src="images/Sistema Animales 5.png">
+</p>
+
+
+
+<h3>Ejemplos de la salida del sistema</h3>
+
+<p>Resultado de búsqueda de <strong>jaguar</strong>:</p>
+<p align="center">
+<img src="images/Sistema Animales 6.png">
+</p>
+
+
+<p>Resultado de búsqueda de <strong>zebra<strong>:</p>
+<p align="center">
+  <img src="images/Sistema Animales 7.png">
+  </p>
+<a href="https://swish.swi-prolog.org/p/animalesSistema.pl">Ejemplo para ejecutar en entorno de swish</a>
+
+
+
 <h1><a id="15-Aplicaciones" class="anchor" href="#15-Aplicaciones" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>12. Aplicaciones</h1>
 <p align="center">
 <img src="images/Aplicaciones.png">
@@ -1732,6 +1784,10 @@ Definitive Clauses Grammar o por sus siglas en inglés DCG</p>
   <embed src="TUTORIAL_PROLOG_2021-II.pdf" width="700" height="385"type='application/pdf'>
 </p>
 
+<p align="center">
+  <embed src="TUTORIALPROLOG2022II.pdf" width="700" height="385"type='application/pdf'>
+</p>
+
 <h2>
 <a id="esperamos-que-el-tutorial-haya-sido-de-su-agrado-todos-los-ejercicios-trabajados-pueden-encontrarlos-en-este-notebook" class="anchor" href="#esperamos-que-el-tutorial-haya-sido-de-su-agrado-los-ejercicios-trabajados-pueden-encontrarlos-en-este-notebook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Esperamos que el tutorial haya sido de su agrado. Los ejercicios trabajados pueden encontrarlos en este <a href="http://swish.swi-prolog.org/p/tutorialprolog.swinb">notebook</a>
 </h2>
@@ -1746,6 +1802,7 @@ Definitive Clauses Grammar o por sus siglas en inglés DCG</p>
 <p>                Alci René Ramírez Soto.</p>
 <p>                Jonathan López Castellanos, Victor Barragán Páez y Wilson Arévalo Rodríguez.</p>
 <p>                María Fernanda Carbonell Santos, Juan David González Muñoz, Ivan Alejandro Cruz Tole y Yuli Beltran Rozo</p>
+<p>                Julián Andrés Pereira, Jefferson Daniel Castro, Nicolás Andrés Caicedo, Gabriel Enrique Ramirez </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mppinedav/prolog">Prolog</a> is maintained by <a href="https://github.com/ferestrepoca/paradigmas-de-programacion/tree/gh-pages/proglogica/tutoriales/prolog-gh-pages">link</a>.</span>
