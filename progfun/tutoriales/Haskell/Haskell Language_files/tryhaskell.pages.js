@@ -444,7 +444,7 @@ tryhaskell.pages.list =
                     "<p>Avísale a alguno de los expositores " +
                     "para recibir tu premio.</p>" +
 
-                    "<p>Espero te haya gustado ese lenguaje."+
+                    "<p>Espero que te haya gustado este lenguaje."+
                     " Te recomendamos aprenderlo a fondo si quieres aprender a programar mucho mejor.</p>"
             },
             trigger: function (result) {
