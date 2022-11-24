@@ -439,7 +439,7 @@ tryhaskell.pages.list =
         },
         {
             guide: function (result) {
-                return "<h3>Lo Lograsteeeee, crack!</h3>" +
+                return "<h3>¡Lo Lograsteeeee, crack!</h3>" +
 
                     "<p>Avísale a alguno de los expositores " +
                     "para recibir tu premio.</p>" +
