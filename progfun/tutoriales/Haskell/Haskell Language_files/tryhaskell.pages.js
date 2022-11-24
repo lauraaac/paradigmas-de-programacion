@@ -445,7 +445,7 @@ tryhaskell.pages.list =
                     "para recibir tu premio.</p>" +
 
                     "<p>Espero que te haya gustado este lenguaje."+
-                    " Te recomendamos aprenderlo a fondo si quieres aprender a programar mucho mejor.</p>"
+                    " Te recomendamos estudiarlo a fondo si quieres aprender a programar mucho mejor.</p>"
             },
             trigger: function (result) {
                 return result.type == "[Char]" &&
