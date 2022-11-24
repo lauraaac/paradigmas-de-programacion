@@ -424,7 +424,7 @@ tryhaskell.pages.list =
                     "<p>Okayyy! Solo recuerda: los caracteres se escriben como <code>'a'</code> y " +
                     "strings (lists of characters)se escriben como <code>\"a\"</code>." +
 
-                    "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula,por favor.</p> " +
+                    "<p>Me gustaría que convirtieras<code>toUpper</code> mi nombre en mayúscula, por favor.</p> " +
                     +"<p> Me llamo <code>\"Haskellito\"</code>.</p> " +
                     "<p> Ahora hazlo! Creo en ti, sé el primero en resolverlo. Te conviene...</p>" 
 
